@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
-import Project from './components/Project';
-import RolesAndResponsibilities from './components/RolesAndResponsibilities';
-import Skills from './components/Skill';
-import Portfolio from './components/Portfolio';
 
-function App() {
+import '../App.css';
+import Navbar from './Navbar';
+import About from './About';
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+import Project from './Project';
+import RolesAndResponsibilities from './RolesAndResponsibilities';
+// import Skills from './components/Skill';
+import Skills  from './Skill';
+
+function Portfolio() {
   return (
     <div className="App">
         <Router>
             <Navbar />
             <Routes>
-                <Route path="/" exact element={<Portfolio/>} />
-                {/* <Route path="/projects" element={<Project/>} />
+                <Route path="/" exact element={<About/>} />
+                <Route path="/projects" element={<Project/>} />
                 <Route path="/roles" element={<RolesAndResponsibilities/>} />
-                <Route path="/skills" element={<Skills/>} /> */}
+                <Route path="/skills" element={<Skills/>} />
                 {/* <Route path="/about" component={About} />
                 <Route path="/projects" component={Projects} /> */}
             </Routes>
@@ -40,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default Portfolio;
